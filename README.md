@@ -39,5 +39,3 @@
 | 4  | LetterPercentage75 | `"lek1"`       | 75%               |
 | 5  | LetterPercentage100 | `"jwenfcrlwjkn"` | 100%              |
 | 6  | LetterPercentage00 | `"1872634"`    | 0%                |
-
-
