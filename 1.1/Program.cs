@@ -8,29 +8,13 @@ class Program
     {
         int money = Input();
         Logic logic = new Logic(money);
-        Output(logic);
+        Console.WriteLine(logic.Output());
     }
 
     static int Input()
     {
         Console.Write("Введите сумму в копейках: ");
         return Convert.ToInt32(Console.ReadLine());
-    }
-
-    static void Output(Logic logic)
-    {
-        if (logic.GetRub() == 0)
-        {
-            Console.WriteLine($"{logic.GetKop()} {logic.KopStr()}");
-        }
-        else if (logic.GetKop() == 0)
-        {
-            Console.WriteLine($"{logic.GetRub()} {logic.RubStr()}");
-        }
-        else
-        {
-            Console.WriteLine($"{logic.GetRub()} {logic.RubStr()} {logic.GetKop()} {logic.KopStr()}");
-        }
     }
 }
 
@@ -91,4 +75,21 @@ public class Logic
             return "копеек";
         }
     }
+
+    public String Output()
+    {
+        if (GetRub() == 0)
+        {
+            return ($"{GetKop()} {KopStr()}");
+        }
+        else if (GetKop() == 0)
+        {
+            return ($"{GetRub()} {RubStr()}");
+        }
+        else
+        {
+            return ($"{GetRub()} {RubStr()} {GetKop()} {KopStr()}");
+        }
+    }
 }
+

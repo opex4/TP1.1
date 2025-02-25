@@ -41,4 +41,22 @@ public sealed class Test1
         var logic = new Logic(10);
         Assert.AreEqual("копеек", logic.KopStr());
     }
+    [TestMethod]
+    public void RubKop100r5k()
+    {
+        var logic = new Logic(10005);
+        Assert.AreEqual("100 рублей 5 копеек", logic.Output());
+    }
+    [TestMethod]
+    public void RubKop0r1k()
+    {
+        var logic = new Logic(1);
+        Assert.AreEqual("1 копейка", logic.Output());
+    }
+    [TestMethod]
+    public void RubKop4r0k()
+    {
+        var logic = new Logic(400);
+        Assert.AreEqual("4 рубля", logic.Output());
+    }
 }
